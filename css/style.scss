@@ -1,0 +1,113 @@
+$primary-bckg-color:#efefef;
+$header-bckg-color:#fff;
+$light-scheme-tile-text-color:#fff;
+
+$btn-color:#fff;
+$button-bckg:#72c3dc;
+$tile-bckg-default:#2b8ead;
+$tile-bckg-blue:#2b8ead;
+$tile-bckg-light:#6f98a8;
+$tile-bckg-gray:#bfbfbf;
+$tile-bckg-dark:#2f454e;
+
+
+
+$main-font-family: Verdana, Helvetica, Arial, sans-serif;
+$main-font-size:14px;
+$main-heading-size:2em;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+*{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  box-sizing:border-box;
+}
+body{
+    background-color: $primary-bckg-color;
+    padding:0;
+    margin:0;
+    font-family: $main-font-family;
+    font-size: $main-font-size;
+}
+div{
+    margin:0;
+    padding:0;
+}
+.wrapper{
+    width:960px;
+    margin:0 auto;
+}
+header, footer{
+    text-align: center;
+}
+header{
+    @extend header;
+    background-color:$header-bckg-color;
+    padding:1% 0;
+    border-bottom:5px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    margin-bottom: -5px;
+    position: relative;
+    z-index: 999;
+
+    h1{
+        margin:0;
+        font-weight: normal;
+    }
+}
+
+.tiles-container{
+    width: 66%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    div{
+        width:32%;
+        display: inline-block;
+        font-size: 4.2em;
+        line-height: 3em;
+        text-align: center;
+        color:$light-scheme-tile-text-color;
+        background-color: $tile-bckg-default;
+    }
+
+    .tile-light{background-color: $tile-bckg-light;}
+    .tile-blue{background-color: $tile-bckg-blue;}
+    .tile-light{background-color: $tile-bckg-light;}
+    .tile-gray{background-color: $tile-bckg-gray;} 
+    .tile-dark{background-color: $tile-bckg-dark;}
+}
+.buttons-container{
+    float:right;
+    width:30%;
+
+    button{
+        margin:20px auto 0px auto;
+        display: block;
+        width:80%;
+        padding:20px 0px;
+        cursor:pointer;
+        color:$btn-color;
+        font-size: $main-font-size;
+        text-transform: uppercase;
+        background-color:$button-bckg;
+        border:0;
+-webkit-box-shadow: inset 0px -5px 0px 0px $tile-bckg-blue;
+-moz-box-shadow: inset 0px -5px 0px 0px $tile-bckg-blue;
+box-shadow: inset 0px -5px 0px 0px $tile-bckg-blue;
+        @include border-radius(10px);
+        
+
+        &:focus{
+            outline:0;
+        }
+    }
+}
