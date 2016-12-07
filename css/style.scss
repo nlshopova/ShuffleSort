@@ -1,6 +1,13 @@
 $primary-bckg-color:#efefef;
-$header-bckg-color:#fff;
+$dark-scheme-bckg-color:#fff;
+
+$light-scheme-header-bckg-color:#fff;
 $light-scheme-tile-text-color:#fff;
+
+$dark-scheme-header-bckg-color:#333;
+$dark-scheme-header-color:#fff;
+$dark-scheme-tile-text-color:#000;
+$dark-scheme-tile-bckg-color:#efefef;
 
 $btn-color:#fff;
 $button-bckg:#72c3dc;
@@ -23,6 +30,12 @@ $main-heading-size:2em;
           border-radius: $radius;
 }
 
+
+.tile-blue{background-color: $tile-bckg-blue;border-left-color: $tile-bckg-blue;}
+.tile-light{background-color: $tile-bckg-light; border-left-color:$tile-bckg-light;}
+.tile-light{background-color: $tile-bckg-light;border-left-color:$tile-bckg-light;}
+.tile-gray{background-color: $tile-bckg-gray;border-left-color:$tile-bckg-gray;} 
+.tile-dark{background-color: $tile-bckg-dark;border-left-color:$tile-bckg-dark;}
 
 *{
   -webkit-box-sizing:border-box;
@@ -50,7 +63,7 @@ header, footer{
 }
 header{
     @extend header;
-    background-color:$header-bckg-color;
+    background-color:$light-scheme-header-bckg-color;
     padding:1% 0;
     border-bottom:5px solid rgba(0,0,0,0.2);
     background-clip: padding-box;
@@ -76,14 +89,7 @@ header{
         line-height: 3em;
         text-align: center;
         color:$light-scheme-tile-text-color;
-        background-color: $tile-bckg-default;
     }
-
-    .tile-light{background-color: $tile-bckg-light;}
-    .tile-blue{background-color: $tile-bckg-blue;}
-    .tile-light{background-color: $tile-bckg-light;}
-    .tile-gray{background-color: $tile-bckg-gray;} 
-    .tile-dark{background-color: $tile-bckg-dark;}
 }
 .buttons-container{
     float:right;
@@ -100,9 +106,9 @@ header{
         text-transform: uppercase;
         background-color:$button-bckg;
         border:0;
--webkit-box-shadow: inset 0px -5px 0px 0px $tile-bckg-blue;
--moz-box-shadow: inset 0px -5px 0px 0px $tile-bckg-blue;
-box-shadow: inset 0px -5px 0px 0px $tile-bckg-blue;
+        -webkit-box-shadow: inset 0px -5px 0px 0px $tile-bckg-blue;
+        -moz-box-shadow: inset 0px -5px 0px 0px $tile-bckg-blue;
+        box-shadow: inset 0px -5px 0px 0px $tile-bckg-blue;
         @include border-radius(10px);
         
 
@@ -110,4 +116,57 @@ box-shadow: inset 0px -5px 0px 0px $tile-bckg-blue;
             outline:0;
         }
     }
+}
+footer{
+    padding:2% 0;
+    font-size: 0.9em;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+    body{
+        background-color: $dark-scheme-bckg-color;
+    }
+    .wrapper{
+        width:100%;
+        padding:0 5%;
+    }
+    header{
+        background-color:$dark-scheme-header-bckg-color;
+        color: $dark-scheme-header-color;
+        margin-bottom: 0;
+        border:none;
+        padding:2% 0;
+    }
+    .tiles-container{
+        width: 100%;
+        margin-top: 5px;
+
+        div{
+            display: block;
+            width: 100%;
+            font-size: 1.4em;
+            line-height: 2.6em;
+            background: $dark-scheme-tile-bckg-color;
+            color:$dark-scheme-tile-text-color;
+            margin-bottom: 5px;
+            border-left-width: 10px;
+            border-left-style: solid;
+        }
+    }
+    .buttons-container{
+        width: 85%;
+        float: none;
+        padding:3% 10%;
+        margin: 0 auto;
+        
+        button{
+            display: inline-block;
+            width: 47%;
+            margin:0;
+        }
+        button+button{
+            margin-left:3%;
+        }
+    }
+
 }

@@ -1,3 +1,23 @@
+.tile-blue {
+  background-color: #2b8ead;
+  border-left-color: #2b8ead; }
+
+.tile-light {
+  background-color: #6f98a8;
+  border-left-color: #6f98a8; }
+
+.tile-light {
+  background-color: #6f98a8;
+  border-left-color: #6f98a8; }
+
+.tile-gray {
+  background-color: #bfbfbf;
+  border-left-color: #bfbfbf; }
+
+.tile-dark {
+  background-color: #2f454e;
+  border-left-color: #2f454e; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -44,18 +64,7 @@ header {
     font-size: 4.2em;
     line-height: 3em;
     text-align: center;
-    color: white;
-    background-color: #2b8ead; }
-  .tiles-container .tile-light {
-    background-color: #6f98a8; }
-  .tiles-container .tile-blue {
-    background-color: #2b8ead; }
-  .tiles-container .tile-light {
-    background-color: #6f98a8; }
-  .tiles-container .tile-gray {
-    background-color: #bfbfbf; }
-  .tiles-container .tile-dark {
-    background-color: #2f454e; }
+    color: white; }
 
 .buttons-container {
   float: right;
@@ -80,3 +89,48 @@ header {
     border-radius: 10px; }
     .buttons-container button:focus {
       outline: 0; }
+
+footer {
+  padding: 2% 0;
+  font-size: 0.9em; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  body {
+    background-color: white; }
+
+  .wrapper {
+    width: 100%;
+    padding: 0 5%; }
+
+  header {
+    background-color: #333333;
+    color: white;
+    margin-bottom: 0;
+    border: none;
+    padding: 2% 0; }
+
+  .tiles-container {
+    width: 100%;
+    margin-top: 5px; }
+    .tiles-container div {
+      display: block;
+      width: 100%;
+      font-size: 1.4em;
+      line-height: 2.6em;
+      background: #efefef;
+      color: black;
+      margin-bottom: 5px;
+      border-left-width: 10px;
+      border-left-style: solid; }
+
+  .buttons-container {
+    width: 85%;
+    float: none;
+    padding: 3% 10%;
+    margin: 0 auto; }
+    .buttons-container button {
+      display: inline-block;
+      width: 47%;
+      margin: 0; }
+    .buttons-container button + button {
+      margin-left: 3%; } }
